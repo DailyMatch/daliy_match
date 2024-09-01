@@ -151,9 +151,17 @@ export default function Testimonial() {
             </div>
             <div className="row mp-none">
               {review.map((testimonial, index) => (
-                <div className="col-lg-4 col-md-6 col-sm-6" key={index}>
-                  <div className="single-item text-center">
-                    <p>{testimonial.comment}</p>
+                <div className="col-lg-4 col-md-6 col-sm-6" key={index} >
+                  <div className="single-item text-center" style={{maxHeight:"220px"}}>
+                  <div className="scroll-container">
+  <div className="scroll-content">
+    <p>{testimonial.comment}</p>
+  </div>
+</div>
+
+
+
+
                     <div className="bottom-area d-flex justify-content-between">
                       <div className="left-area d-flex">
                         <div className="img">
