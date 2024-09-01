@@ -5269,3 +5269,18 @@ justify-content: end;
   background: #0000b3;
   z-index: 9999;
 }
+
+.scroll-container {
+  overflow: hidden; /* Hide scrollbars */
+  max-height: 57px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.scroll-content {
+  overflow: auto; /* Enable scrollable area */
+  height: 100%; /* Ensure the inner div takes up the full height of the parent */
+  padding-right: 15px; /* Optional: Avoid content touching the right edge */
+}
+
