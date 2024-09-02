@@ -65,7 +65,11 @@ export default function Login() {
       setSuccess(true);
       navigate('/');
     } catch (err) {
-      console.error('Login failed:', err);
+      // console.error('Login failed:', err);
+        if(err.response.data.message === 'User not verified'){
+          setNotifications([{ type: 'error', message: 'Login failed. User is not Verified.' }]);
+          return
+        }
       setNotifications([{ type: 'error', message: 'Login failed. Please try again later.' }]);
     } finally {
       setLoading(false); // Hide preloader after request completes

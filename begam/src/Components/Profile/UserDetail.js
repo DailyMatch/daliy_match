@@ -22,13 +22,14 @@ export default function UserDetail(props) {
   const { user } = props;
   // State for managing tournaments
   const [loading, setLoading] = useState(false);
+  const [showemail, setShowemail] = useState(false);
   const [userTournaments, setUserTournaments] = useState([]);
   const token = useSelector((state) => state.token);
   const updatedAt = dayjs(user.user.updatedAt);
   const [notifications, setNotifications] = useState([]); // State for notifications
   // State to manage the visibility of all tournaments
   const [showAllTournaments, setShowAllTournaments] = useState(false);
-
+  const [newemail, setNewemail] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
   // Calculate the number of pages
@@ -46,29 +47,24 @@ export default function UserDetail(props) {
 
   // Function to handle edit button click
   const handleEditClick = () => {
-    setNotifications([{ type: "success", message: "Edit Clicked!!!" }]);
-    setIsEditable(!isEditable);
+    setShowemail(!showemail);
   };
 
   const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({
-      ...formData,
-      [id]: value,
-    });
+    setNewemail(e.target.value); // Update the newEmail state with input value
   };
 
   // Function to handle form submission
-  const handleSubmit = async () => {
-    // Log the updated form data
-    console.log("Updated User Details:", formData);
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission
+    console.log("New email:", newemail); 
     // You can make an API call here to update the user details on the server
     try {
       setLoading(true);
-      const res = await updateUserEmail(formData, token);
+      const res = await updateUserEmail(newemail, token);
       setLoading(false);
       console.log(res);
-      navigate("/verify", { state: { email: formData.email } });
+      navigate("/verify", { state: { email: newemail } });
     } catch (error) {
       setNotifications([{ type: "error", message: "Error Occured!!!" }]);
     } finally {
@@ -175,10 +171,8 @@ export default function UserDetail(props) {
                         </div>
                         <div className="right" style={{ color: "white" }}>
                           <FontAwesomeIcon
-                            icon={isEditable ? faCheck : faEdit}
-                            onClick={
-                              isEditable ? handleSubmit : handleEditClick
-                            }
+                            icon={faEdit}
+                            onClick={handleEditClick  }
                             style={{ cursor: "pointer" }}
                           />
                         </div>
@@ -309,73 +303,98 @@ export default function UserDetail(props) {
             </div>
           </div>
           <div className="user-tournaments">
-      <div className="statistics-area">
-        <div className="row">
-          <div className="col-lg-6">
-            <div className="total-area">
-              <div className="head-area d-flex justify-content-between">
-                <div className="left">
-                  <h5>Your Tournaments</h5>
-                </div>
-              </div>
-              <div className="tab-content" id="myTabContents">
-                <div
-                  className="tab-pane fade show active"
-                  id="fortnite"
-                  role="tabpanel"
-                  aria-labelledby="fortnite-tab"
-                >
-                  <div className="row">
-                    <div className="col-lg-12 col-md-12">
-                      <div>
-                        {currentTournaments.map((tournament) => (
-                          <div
-                            className="usertournament"
-                            key={tournament._id}
-                            style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              gap: '10px',
-                            }}
-                          >
-                            <FontAwesomeIcon
-                              icon={faCircle}
-                              style={{ color: 'white' }}
-                            />
-                            <p>
-                              {tournament.tournamentStateId.tournamentId.name}
-                            </p>
-                          </div>
-                        ))}
+            <div className="statistics-area">
+              <div className="row">
+                <div className="col-lg-6">
+                  <div className="total-area">
+                    <div className="head-area d-flex justify-content-between">
+                      <div className="left">
+                        <h5>Your Tournaments</h5>
                       </div>
                     </div>
+                    <div className="tab-content" id="myTabContents">
+                      <div
+                        className="tab-pane fade show active"
+                        id="fortnite"
+                        role="tabpanel"
+                        aria-labelledby="fortnite-tab"
+                      >
+                        <div className="row">
+                          <div className="col-lg-12 col-md-12">
+                            <div>
+                              {currentTournaments.map((tournament) => (
+                                <div
+                                  className="usertournament"
+                                  key={tournament._id}
+                                  style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: "10px",
+                                  }}
+                                >
+                                  <FontAwesomeIcon
+                                    icon={faCircle}
+                                    style={{ color: "white" }}
+                                  />
+                                  <p>
+                                    {
+                                      tournament.tournamentStateId.tournamentId
+                                        .name
+                                    }
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {totalPages > 1 && (
+                      <div className="pagination-controls d-flex justify-content-between">
+                        <button
+                          onClick={() => handlePageChange("previous")}
+                          disabled={currentPage === 1}
+                        >
+                          <FontAwesomeIcon icon={faArrowLeftLong} />
+                        </button>
+                        <span>{`${currentPage} of ${totalPages}`}</span>
+                        <button
+                          onClick={() => handlePageChange("next")}
+                          disabled={currentPage === totalPages}
+                        >
+                          <FontAwesomeIcon icon={faArrowRightLong} />
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
-              {totalPages > 1 && (
-                <div className="pagination-controls d-flex justify-content-between">
-                  <button
-                    onClick={() => handlePageChange('previous')}
-                    disabled={currentPage === 1}
-                  >
-                    <FontAwesomeIcon icon={faArrowLeftLong}/>
-                  </button>
-                  <span>{`${currentPage} of ${totalPages}`}</span>
-                  <button
-                    onClick={() => handlePageChange('next')}
-                    disabled={currentPage === totalPages}
-                  >
-                    <FontAwesomeIcon icon={faArrowRightLong} />
-                  </button>
-                </div>
-              )}
             </div>
           </div>
         </div>
-      </div>
-    </div>
-        </div>
       </section>
+
+      {showemail && (
+        <div className="changeemail">
+          <div className="close" onClick={handleEditClick}>
+            &times;
+          </div>
+          <form className="email-contanier" onSubmit={handleSubmit}>
+            <p>Update Email</p>
+            <input
+              type="email"
+              placeholder="Enter Your New Email"
+              value={newemail} // Bind the input value to newEmail state
+              onChange={handleInputChange} // Update the state on input change
+              required
+            />
+            <button className="cmn-btn" type="submit" style={{ color: "white" }}>
+              Submit
+            </button>
+          </form>
+        </div>
+      )}
+     
     </>
   );
 }
