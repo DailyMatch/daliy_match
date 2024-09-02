@@ -76,6 +76,8 @@ export default function Signup() {
       setNotifications([{ type: "success", message: "Signup successful!" }]);
       navigate("/verify", { state: { email: details.email } });
     } catch (error) {
+      console.log(error);
+      
       setNotifications([{ type: "error", message: "Unable to Create Account" }]);
       // Clear form fields on error
       setDetails({

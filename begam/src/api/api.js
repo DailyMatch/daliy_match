@@ -111,8 +111,8 @@ export const participents = (token) => {
   });
 };
 
-export const updateUserEmail = (data,token) => {
-  return authAxiosInstance.post("/update-email",data,{
+export const updateUserEmail = (email,token) => {
+  return authAxiosInstance.post("/update-email",{email},{
     headers: { "x-auth-token": token },
   });
 };
