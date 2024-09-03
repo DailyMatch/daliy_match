@@ -67,7 +67,7 @@ export default function Login() {
     } catch (err) {
       // console.error('Login failed:', err);
         if(err.response.data.message === 'User not verified'){
-          setNotifications([{ type: 'error', message: 'Login failed. User is not Verified.' }]);
+          setNotifications([{ type: 'error', message: 'Login failed. User is not Verified. Click on Verfiy Email to verify !!' }]);
           return
         }
       setNotifications([{ type: 'error', message: 'Login failed. Please try again later.' }]);
