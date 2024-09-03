@@ -336,7 +336,7 @@ if(loading){
                     </h2>
                     <input
                       type="text"
-                      placeholder="Enter your ID"
+                      placeholder="Enter your Bgmi ID"
                       value={pubgId}
                       onChange={(e) => setPubgId(e.target.value)}
                       className="jointournament"
