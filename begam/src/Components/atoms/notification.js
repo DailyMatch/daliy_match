@@ -21,9 +21,11 @@ const Notification = ({ type, message }) => {
   }
 
   return (
-    <div className={`notification ${type}`}>
-      <FontAwesomeIcon icon={faCircleInfo} style={{marginRight:"10px"}}/>
-      {message}
+    <div className={`notification ${type}`} style={{display:"flex"}}>
+      <span style={{height:"100%"}}>
+      <FontAwesomeIcon icon={faCircleInfo} style={{marginRight:"10px"}}/></span>
+      <span style={{height:"100%"}}>
+      {message}</span>
     </div>
   );
 };

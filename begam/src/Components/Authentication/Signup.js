@@ -77,15 +77,27 @@ export default function Signup() {
       navigate("/verify", { state: { email: details.email } });
     } catch (error) {
       console.log(error);
+      console.log(error);
+      
+      if(error.response.data.error === 'Email already in use'){
+        setNotifications([{ type: 'error', message: 'Unable to Create Account, Email already exists !!' }]);
+        return
+      }
+
+      if(error.response.data.error === 'Phone number already in use'){
+        setNotifications([{ type: 'error', message: 'Unable to Create Account, Phone number already exists !!' }]);
+        return
+      }
+
       
       setNotifications([{ type: "error", message: "Unable to Create Account" }]);
       // Clear form fields on error
-      setDetails({
-        email: "",
-        name: "",
-        password: "",
-        phoneNumber: "",
-      });
+      // setDetails({
+      //   email: "",
+      //   name: "",
+      //   password: "",
+      //   phoneNumber: "",
+      // });
     } finally {
       setLoading(false);
     }
