@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram,
+  faYoutube,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer() {
   const location = useLocation();
@@ -29,7 +35,6 @@ export default function Footer() {
     };
   }, [location.pathname]);
 
-
   return (
     <footer id="footer-section">
       <div className="footer-mid pt-120">
@@ -41,19 +46,75 @@ export default function Footer() {
                   <img src="/images/logo.png" alt="site-logo" />
                 </Link>
               </div>
-              <ul className="menu-side d-flex align-items-center" style={{minHeight:"70px"}}>
-                <li><Link to="/terms" className="active" style={{fontSize:"14px",marginTop:"10px"}}>Term & Condition</Link></li>
-                <li><Link to="/privacy" style={{fontSize:"14px",marginTop:"10px"}}>Privacy Policy</Link></li>
-                <li><Link to="/refund" style={{fontSize:"14px",marginTop:"10px"}}>Refund Policy</Link></li>
-                <li><Link to="/contact" style={{fontSize:"14px",marginTop:"10px"}}>Contact Us</Link></li>
+              <ul
+                className="menu-side d-flex align-items-center"
+                style={{ minHeight: "70px" }}
+              >
+                <li>
+                  <Link
+                    to="/terms"
+                    className="footer-font"
+                  >
+                    Term & Condition
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/privacy"
+                         className="footer-font"
+                   
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/refund"
+                      className="footer-font"
+                  >
+                    Refund Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contact"
+                  className="footer-font"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="col-lg-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
               <div className="right-area">
                 <ul className="d-flex">
-                  <li><Link ><FontAwesomeIcon icon={faYoutube} /></Link></li>
-                  <li><Link ><FontAwesomeIcon icon={faXTwitter} /></Link></li>
-                  <li><Link ><FontAwesomeIcon icon={faInstagram} /></Link></li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/@dailymatch-in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faYoutube} />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://x.com/dailymatch_in/status/1842887550593372355?s=61"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faXTwitter} />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/dailymatch.in/?igsh=cXp3bjVwamh4bG1s&utm_source=qr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -68,7 +129,10 @@ export default function Footer() {
                 <div className="left-area text-center">
                   <p>
                     Copyright © 2024. All Rights Reserved By
-                    <Link to="/" className="footer-brand"> Daily Matches</Link>
+                    <Link to="/" className="footer-brand">
+                      {" "}
+                      Daily Matches
+                    </Link>
                   </p>
                 </div>
               </div>

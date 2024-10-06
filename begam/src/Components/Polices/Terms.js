@@ -1,6 +1,7 @@
-import React from 'react'
-import Navbar from '../Home/Navbar'
-import Footer from '../Home/Footer';
+import React, { useEffect, useState } from "react";
+import Navbar from "../Home/Navbar";
+import Footer from "../Home/Footer";
+import Spinner from "../atoms/Spinner";
 
 const Terms = () => {
 const tournaments = [
@@ -13,6 +14,21 @@ const tournaments = [
     { id: 7, name: 'Limitation of Liability', description: 'Dailymatch.in is not liable for any indirect, incidental, or consequential damages arising from the use of the site.We do not guarantee uninterrupted access to the website and are not responsible for any technical issues that may occur.' },
     { id: 8, name: 'Governing Law', description: 'These terms and conditions are governed by the laws of the jurisdiction in which the company operates.' },
 ];
+
+
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  setTimeout(() => {
+    setLoading(false);
+  }, 1000);
+  window.scrollTo(0, 0);
+}, []);
+
+if (loading) {
+  return <Spinner/>;
+}
+
 
 return (
     <>

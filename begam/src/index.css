@@ -5339,3 +5339,8 @@ justify-content: end;
   cursor: pointer;
   right: 10px;
 }
+
+.footer-font{
+  font-size: 14px;
+  margin-top: 15px;
+}
