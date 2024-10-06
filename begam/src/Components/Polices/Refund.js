@@ -1,8 +1,10 @@
-import React from 'react'
-import Navbar from '../Home/Navbar'
-import Footer from '../Home/Footer';
+import React, { useEffect, useState } from "react";
+import Navbar from "../Home/Navbar";
+import Footer from "../Home/Footer";
+import Spinner from "../atoms/Spinner";
 
 const Refund = () => {
+  
 
     const tournaments = [
         { id: 1, name: 'Tournament Entry Fees', description: 'No refunds will be issued once a tournament has started unless it is canceled by Dailymatch.in. Users who withdraw before a tournament begins may request a refund within 24 hours.' },
@@ -11,7 +13,18 @@ const Refund = () => {
         { id: 4, name: 'Disputes', description: 'All disputes must be submitted within 7 days of the tournaments end. Dailymatch.in’s decision will be final. Contact us at play@dailymatch.in for support' },
     ];
 
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+      window.scrollTo(0, 0);
+    }, []);
+  
+    if (loading) {
+      return <Spinner/>;
+    }
     
   return (
     <>

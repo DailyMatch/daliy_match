@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Home/Navbar";
 import Footer from "../Home/Footer";
+import Spinner from "../atoms/Spinner";
 
 const Privacy = () => {
 
@@ -13,6 +14,21 @@ const Privacy = () => {
         { id: 6, name: 'Third-Party Links', description: 'Dailymatch.in may contain links to third-party websites. We are not responsible for the privacy practices of these sites.' },
         { id: 7, name: 'Changes to Policy', description: 'We may update this Privacy Policy periodically. Users will be notified of any major changes via email or through our website.' }
     ];
+
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+      window.scrollTo(0, 0);
+    }, []);
+  
+    if (loading) {
+      return <Spinner/>;
+    }
+
 
 
   return (
