@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faInstagram, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Footer() {
@@ -41,18 +41,18 @@ export default function Footer() {
                   <img src="/images/logo.png" alt="site-logo" />
                 </Link>
               </div>
-              <ul className="menu-side d-flex align-items-center">
-                <li><Link to="/" className="active">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/tournament">Tournament</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
+              <ul className="menu-side d-flex align-items-center" style={{minHeight:"70px"}}>
+                <li><Link to="/terms" className="active" style={{fontSize:"14px",marginTop:"10px"}}>Term & Condition</Link></li>
+                <li><Link to="/privacy" style={{fontSize:"14px",marginTop:"10px"}}>Privacy Policy</Link></li>
+                <li><Link to="/refund" style={{fontSize:"14px",marginTop:"10px"}}>Refund Policy</Link></li>
+                <li><Link to="/contact" style={{fontSize:"14px",marginTop:"10px"}}>Contact Us</Link></li>
               </ul>
             </div>
             <div className="col-lg-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
               <div className="right-area">
                 <ul className="d-flex">
-                  <li><Link ><FontAwesomeIcon icon={faFacebookF} /></Link></li>
-                  <li><Link ><FontAwesomeIcon icon={faTwitter} /></Link></li>
+                  <li><Link ><FontAwesomeIcon icon={faYoutube} /></Link></li>
+                  <li><Link ><FontAwesomeIcon icon={faXTwitter} /></Link></li>
                   <li><Link ><FontAwesomeIcon icon={faInstagram} /></Link></li>
                 </ul>
               </div>
