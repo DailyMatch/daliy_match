@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../Home/Navbar'
+import Footer from '../Home/Footer';
 
 const Terms = () => {
 const tournaments = [
@@ -9,8 +10,8 @@ const tournaments = [
     { id: 4, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
     { id: 5, name: 'Prize Distribution', description: 'Dailymatch.in reserves the right to delay or withhold payouts in case of suspicious activity or technical issues.The prize amount is set and communicated to participants before the tournament begins, but the prize is only awarded to the winners after the tournament has been played and the results are finalized.' },
     { id: 6, name: 'User Conduct', description: 'Users must not engage in any activity that interferes with or disrupts the website or the services provided.Abusive, harmful, or offensive behavior will not be tolerated and may result in immediate termination of access.' },
-    { id: 7, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
-    { id: 8, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
+    { id: 7, name: 'Limitation of Liability', description: 'Dailymatch.in is not liable for any indirect, incidental, or consequential damages arising from the use of the site.We do not guarantee uninterrupted access to the website and are not responsible for any technical issues that may occur.' },
+    { id: 8, name: 'Governing Law', description: 'These terms and conditions are governed by the laws of the jurisdiction in which the company operates.' },
 ];
 
 return (
@@ -51,6 +52,8 @@ return (
                 </ul>
             </div>
         </section>
+
+        <Footer/>
     </>
 );
 }

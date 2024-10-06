@@ -1,17 +1,17 @@
 import React from "react";
 import Navbar from "../Home/Navbar";
+import Footer from "../Home/Footer";
 
 const Privacy = () => {
 
     const tournaments = [
-        { id: 1, name: 'Introduction', description: 'By using Dailymatch.in, you agree to be bound by the following terms and conditions. If you do not agree with any part of these terms, you should not use the website.' },
-        { id: 2, name: 'Eligibility', description: 'To participate in any tournament, you must be 18 years or older, or have parental consent. Your Gaming ID has to be over 60 days old.' },
-        { id: 3, name: 'Account Registration', description: 'Players must create an account by providing accurate and current information.Each user is responsible for maintaining the confidentiality of their account details and activities.' },
-        { id: 4, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
-        { id: 5, name: 'Prize Distribution', description: 'Dailymatch.in reserves the right to delay or withhold payouts in case of suspicious activity or technical issues.The prize amount is set and communicated to participants before the tournament begins, but the prize is only awarded to the winners after the tournament has been played and the results are finalized.' },
-        { id: 6, name: 'User Conduct', description: 'Users must not engage in any activity that interferes with or disrupts the website or the services provided.Abusive, harmful, or offensive behavior will not be tolerated and may result in immediate termination of access.' },
-        { id: 7, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
-        { id: 8, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
+        { id: 1, name: 'Information Collection', description: 'We collect personal information such as name, email, contact details, and payment information when users register or participate in tournaments.' },
+        { id: 2, name: 'Use of Information', description: 'We use your data to facilitate tournament participation, payment processing, and communication about events.We may share personal information with third-party payment processors, but will never sell or rent your data.' },
+        { id: 3, name: 'Data Protection', description: 'We employ standard security practices to safeguard your personal data.' },
+        { id: 4, name: 'User Rights', description: 'You have the right to access, modify, or delete your personal information at any time by contacting our support team.' },
+        { id: 5, name: 'Cookies', description: 'We use cookies to enhance your experience, for analytics, and to track tournament participation.' },
+        { id: 6, name: 'Third-Party Links', description: 'Dailymatch.in may contain links to third-party websites. We are not responsible for the privacy practices of these sites.' },
+        { id: 7, name: 'Changes to Policy', description: 'We may update this Privacy Policy periodically. Users will be notified of any major changes via email or through our website.' }
     ];
 
 
@@ -53,6 +53,7 @@ const Privacy = () => {
                 </ul>
             </div>
         </section>
+        <Footer/>
     </>
   );
 };

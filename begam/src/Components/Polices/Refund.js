@@ -1,17 +1,14 @@
 import React from 'react'
 import Navbar from '../Home/Navbar'
+import Footer from '../Home/Footer';
 
 const Refund = () => {
 
     const tournaments = [
-        { id: 1, name: 'Introduction', description: 'By using Dailymatch.in, you agree to be bound by the following terms and conditions. If you do not agree with any part of these terms, you should not use the website.' },
-        { id: 2, name: 'Eligibility', description: 'To participate in any tournament, you must be 18 years or older, or have parental consent. Your Gaming ID has to be over 60 days old.' },
-        { id: 3, name: 'Account Registration', description: 'Players must create an account by providing accurate and current information.Each user is responsible for maintaining the confidentiality of their account details and activities.' },
-        { id: 4, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
-        { id: 5, name: 'Prize Distribution', description: 'Dailymatch.in reserves the right to delay or withhold payouts in case of suspicious activity or technical issues.The prize amount is set and communicated to participants before the tournament begins, but the prize is only awarded to the winners after the tournament has been played and the results are finalized.' },
-        { id: 6, name: 'User Conduct', description: 'Users must not engage in any activity that interferes with or disrupts the website or the services provided.Abusive, harmful, or offensive behavior will not be tolerated and may result in immediate termination of access.' },
-        { id: 7, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
-        { id: 8, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
+        { id: 1, name: 'Tournament Entry Fees', description: 'No refunds will be issued once a tournament has started unless it is canceled by Dailymatch.in. Users who withdraw before a tournament begins may request a refund within 24 hours.' },
+        { id: 2, name: 'Tournament Cancellations', description: 'If canceled due to technical issues or low participation, entry fees will be refunded to the users wallet within 7 business days.' },
+        { id: 3, name: 'Technical Failures', description: 'Refunds may be granted on a case-by-case basis for technical issues, with requests submitted within 48 hours.' },
+        { id: 4, name: 'Disputes', description: 'All disputes must be submitted within 7 days of the tournaments end. Dailymatch.in’s decision will be final. Contact us at play@dailymatch.in for support' },
     ];
 
 
@@ -54,6 +51,7 @@ const Refund = () => {
                 </ul>
             </div>
         </section>
+        <Footer/>
     </>
   )
 }
