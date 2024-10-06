@@ -29,6 +29,10 @@ import SingleTournament from "./Components/Tournaments/SingleTournament";
 import Admin from "./Components/Admin/Admin";
 import Verify from "./Components/Authentication/Verify";
 import Tournaments from "./Components/Admin/Tournaments";
+import Blogs from "./Components/Blogs/Blogs";
+import Terms from "./Components/Polices/Terms";
+import Privacy from "./Components/Polices/Privacy";
+import Refund from "./Components/Polices/Refund";
 
 const App = () => {
 
@@ -52,6 +56,10 @@ const App = () => {
           <Route path="/singletournament/:id" element={<SingleTournament />} />
           <Route path="/updatetournament" element={<Protected component={Tournaments} />} />
           <Route exact path="/admin" element={<Admin/>} />
+          <Route exact path="/blogs" element={<Blogs/>} />
+          <Route exact path="/terms" element={<Terms/>} />
+          <Route exact path="/privacy" element={<Privacy/>} />
+          <Route exact path="/refund" element={<Refund/>} />
           <Route exact path="/error" element={<Error/>} />
         </Routes>
       </BrowserRouter>
