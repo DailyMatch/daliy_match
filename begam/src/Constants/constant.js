@@ -79,7 +79,7 @@ export const ABOUT_PAGE_DATA = {
     aboutSection: {
       title: "ABOUT Begam",
       paragraphs: [
-        "Welcome to our platform, the ultimate destination for thrilling and competitive gaming tournaments. We pride ourselves on creating a space where players of all skill levels, from beginners to professionals, can come together and showcase their talents in exciting matches.",
+        
         "Our tournaments are designed to be inclusive and competitive, offering opportunities for everyone to participate and compete for glory. Whether you're just starting your gaming journey or you're a seasoned pro, our platform provides the perfect stage for you to demonstrate your skills and rise to the top.",
         "Each tournament is a battle of wits and skills, and we reward the top 10 players with fantastic prizes. Our reward system is designed to motivate and recognize the best players, ensuring that your hard work and dedication are always appreciated.",
         "To maintain the integrity of our competitions, we have implemented rigorous monitoring systems. Our advanced anti-cheat technology ensures that no hacker can use any unfair means to gain an advantage. We are committed to providing a fair and level playing field for all participants, so you can focus on what you do best – playing your heart out and enjoying the game. Join us today and become part of a vibrant community of gamers who are passionate about competition, fairness, and fun. Your journey to becoming a champion starts here."
