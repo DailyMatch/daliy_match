@@ -178,12 +178,12 @@ export default function Navbar() {
                     </li>
                     <li>
                       <Link
-                        to="/contact"
+                        to="/blogs"
                         className={
                           location.pathname === "/contact" ? "active" : ""
                         }
                       >
-                        Contact Us
+                        Blogs
                       </Link>
                     </li>
                     {authToken ? (

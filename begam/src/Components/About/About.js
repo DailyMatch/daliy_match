@@ -73,7 +73,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section id="team-section" className="pb-120" data-aos="fade-up" data-aos-offset="200">
+      {/* <section id="team-section" className="pb-120" data-aos="fade-up" data-aos-offset="200">
         <div className="overlay pt-120">
           <div className="container wow fadeInUp">
             <div className="row justify-content-center">
@@ -114,7 +114,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <Footer />
     </>
   );
