@@ -22,7 +22,7 @@ const steps = [
   },
   {
     number: 4,
-    imgSrc: 'images/how-icon-4.png',
+    imgSrc: 'images/how-icon-8.png',
     title: 'GET PAID',
     className: 'obj-rel'
   }

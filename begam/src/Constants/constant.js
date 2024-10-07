@@ -4,7 +4,7 @@
 export const HERO_SECTION_DATA = {
     heading: "Play Everyday",
     subheading: "Tournaments",
-    description: "Compete in Free and Paid entry Tournaments. Transform your games to real money eSports",
+    description: "Compete in Free and Paid entry Tournaments. Transform your games to real money with eSports",
     buttons: {
         loggedIn: {
             text: "Get Started",
