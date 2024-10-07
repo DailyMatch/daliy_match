@@ -17,7 +17,7 @@ export default function Games() {
             <div className="row justify-content-between">
               <div className="col-lg-10">
                 <div className="section-header">
-                  <h2 className="title">Available Games</h2>
+                  <h2 className="title">Available Games for daily matches</h2>
                   <p>We are constantly adding new games</p>
                 </div>
               </div>
