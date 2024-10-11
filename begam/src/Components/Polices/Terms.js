@@ -5,7 +5,7 @@ import Spinner from "../atoms/Spinner";
 
 const Terms = () => {
 const tournaments = [
-    { id: 1, name: 'Introduction', description: 'By using Dailymatch.in, you agree to be bound by the following terms and conditions. If you do not agree with any part of these terms, you should not use the website.' },
+    { id: 1, name: 'Introduction', description: 'www.Dailymatch.in is operated by Daily Match. By using this website, you agree to be bound by the following terms and conditions. If you do not agree with any part of these terms, you should not use the website.' },
     { id: 2, name: 'Eligibility', description: 'To participate in any tournament, you must be 18 years or older, or have parental consent. Your Gaming ID has to be over 60 days old.' },
     { id: 3, name: 'Account Registration', description: 'Players must create an account by providing accurate and current information.Each user is responsible for maintaining the confidentiality of their account details and activities.' },
     { id: 4, name: 'Tournament Rules', description: 'Entry fees are required to participate in paid tournaments.Players must adhere to the rules specified for each tournament, including time, format, and gameplay restrictions.Any form of cheating, hacking, or exploitation will lead to disqualification and possible account suspension.' },
