@@ -347,7 +347,7 @@ if(loading){
                       className="cmn-btn"
                       style={{ color: "white" }}
                     >
-                      {isJoining ? "Submit" : "Join Now!"}
+                      {isJoining ? "Proceed to Pay" : "Join Now!"}
                     </button>
                   </div>
                 </div>
