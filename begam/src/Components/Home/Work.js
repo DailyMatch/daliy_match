@@ -64,7 +64,7 @@ export default function Work() {
           </div>
           <div className="row d-flex justify-content-center">
             <div className="col-lg-6 text-center">
-              <Link to={"/"} className="cmn-btn">Get Started</Link>)
+              
             </div>
           </div>
         </div>
