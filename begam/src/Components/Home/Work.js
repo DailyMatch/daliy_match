@@ -48,7 +48,7 @@ export default function Work() {
             {steps.map((step, index) => (
               <div
                 className={`col-lg-3 col-md-3 col-sm-6 d-flex justify-content-center ${step.className || ''}`}
-                key={index}
+                key={index }
               >
                 <div className="single-item">
                   <div className="icon-area">
