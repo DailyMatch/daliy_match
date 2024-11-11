@@ -45,7 +45,7 @@ export const FEATURES_DATA = [
   },
   {
     imgSrc: 'images/features-icon-5.png',
-    title: 'Make up to 10X your',
+    title: 'Make up to 10X Everyday',
     description: 'Make up to 10X your money on multiplayer tourneys. With paid and free entry.'
   },
   {
